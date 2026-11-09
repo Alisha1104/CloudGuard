@@ -1,0 +1,170 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0b1120;
+    color: #e2e8f0;
+}
+
+header {
+    background: #111827;
+    padding: 25px 40px;
+    border-bottom: 1px solid #263247;
+}
+
+header h1 {
+    margin: 0;
+    color: #38bdf8;
+    font-size: 30px;
+}
+
+header p {
+    color: #94a3b8;
+}
+
+main {
+    padding: 30px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #151e30;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #263247;
+}
+
+.card h3 {
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+.card p {
+    font-size: 35px;
+    font-weight: bold;
+    color: #38bdf8;
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 35px;
+}
+
+.finding {
+    background: #151e30;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border: 1px solid #263247;
+    border-left: 5px solid #64748b;
+}
+
+.finding.HIGH {
+    border-left-color: #f97316;
+}
+
+.finding.CRITICAL {
+    border-left-color: #ef4444;
+}
+
+.severity {
+    font-weight: bold;
+}
+
+.CRITICAL .severity {
+    color: #f87171;
+}
+
+.HIGH .severity {
+    color: #fb923c;
+}
+
+.finding p {
+    line-height: 1.6;
+}
+
+button {
+    background: #0284c7;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #0369a1;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
+    }
+
+    header {
+        padding: 20px;
+    }
+}
+
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.gauge {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(
+        #22c55e 0deg,
+        #263247 0deg
+    );
+}
+
+.gauge-inner {
+    width: 120px;
+    height: 120px;
+    background: #151e30;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gauge-inner span {
+    font-size: 30px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.gauge-inner small {
+    color: #94a3b8;
+}
+
+.score-card {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+}
+

@@ -1,0 +1,25 @@
+
+{
+  "storage_account": {
+    "name": "demoStorage",
+    "allow_blob_public_access": true,
+    "https_only": false
+  },
+  "network_security_group": {
+    "name": "demoNSG",
+    "rules": [
+      {
+        "name": "AllowSSH",
+        "port": 22,
+        "source": "*",
+        "access": "Allow"
+      },
+      {
+        "name": "AllowRDP",
+        "port": 3389,
+        "source": "*",
+        "access": "Allow"
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+    "passed": 7,
+    "failed": 8,
+    "findings": [
+        {
+            "check_id": "CKV_AZURE_59",
+            "check_name": "Ensure that Storage accounts disallow public access",
+            "severity": null,
+            "resource": "azurerm_storage_account.cloudguard_demo",
+            "file": "\\main.tf",
+            "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/azure-policies/azure-networking-policies/ensure-that-storage-accounts-disallow-public-access"
+        },
+        {
+            "check_id": "CKV_AZURE_33",
+            "check_name": "Ensure Storage logging is enabled for Queue service for read, write and delete requests",
+            "severity": null,
+            "resource": "azurerm_storage_account.cloudguard_demo",
+            "file": "\\main.tf",
+            "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/azure-policies/azure-logging-policies/enable-requests-on-storage-logging-for-queue-service"
+        },
+        {
+            "check_id": "CKV_AZURE_206",
+            "check_name": "Ensure that Storage Accounts use replication",
+            "severity": null,
+            "resource": "azurerm_storage_account.cloudguard_demo",
+            "file": "\\main.tf",
+            "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/azure-policies/azure-general-policies/azr-general-206"
+        },
+        {
+            "check_id": "CKV2_AZURE_40",
+            "check_name": "Ensure storage account is not configured with Shared Key authorization",
+            "severity": null,
+            "resource": "azurerm_storage_account.cloudguard_demo",
+            "file": "\\main.tf",
+            "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/azure-policies/azure-iam-policies/bc-azure-2-40"
+        },
+        {
+            "check_id": "CKV2_AZURE_33",
+            "check_name": "Ensure storage account is configured with private endpoint",
+            "severity": null,
+            "resource": "azurerm_storage_account.cloudguard_demo",
+            "file": "\\main.tf",
+            "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/azure-policies/azure-general-policies/bc-azure-2-33"
+        },
+        {
+            "check_id": "CKV2_AZURE_41",
+            "check_name": "Ensure storage account is configured with SAS expiration policy",
+            "severity": null,
+            "resource": "azurerm_storage_account.cloudguard_demo",
+            "file": "\\main.tf",
+            "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/azure-policies/azure-iam-policies/bc-azure-2-41"
+        },
+        {
+            "check_id": "CKV2_AZURE_38",
+            "check_name": "Ensure soft-delete is enabled on Azure storage account",
+            "severity": null,
+            "resource": "azurerm_storage_account.cloudguard_demo",
+            "file": "\\main.tf",
+            "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/azure-policies/azure-general-policies/bc-azure-2-38"
+        },
+        {
+            "check_id": "CKV2_AZURE_1",
+            "check_name": "Ensure storage for critical data are encrypted with Customer Managed Key",
+            "severity": null,
+            "resource": "azurerm_storage_account.cloudguard_demo",
+            "file": "\\main.tf",
+            "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/azure-policies/azure-general-policies/ensure-storage-for-critical-data-are-encrypted-with-customer-managed-key"
+        }
+    ]
+}

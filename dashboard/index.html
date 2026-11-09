@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudGuard Security Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>CloudGuard</h1>
+    <p>Azure Cloud Security Assessment Dashboard</p>
+</header>
+
+<main>
+
+    <div class="actions">
+        <button onclick="loadReport()">Refresh Dashboard</button>
+        <button onclick="downloadReport()">Download Report</button>
+    </div>
+
+    <section class="summary">
+
+        <div class="card score-card">
+            <h3>Security Score</h3>
+
+            <div class="gauge" id="gauge">
+                <div class="gauge-inner">
+                    <span id="score">--</span>
+                    <small> / 100</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Total Findings</h3>
+            <p id="total">--</p>
+        </div>
+
+        <div class="card">
+            <h3>Critical Issues</h3>
+            <p id="critical">--</p>
+        </div>
+
+        <div class="card">
+            <h3>High Issues</h3>
+            <p id="high">--</p>
+        </div>
+
+    </section>
+
+    <h2>Security Findings</h2>
+    <div id="findings">Loading report...</div>
+
+
+<section class="terraform-section">
+    <h2>Terraform Security Scan</h2>
+
+    <div class="stats">
+        <div class="card">
+            <h3>Passed Checks</h3>
+            <p id="tf-passed">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Failed Checks</h3>
+            <p id="tf-failed">0</p>
+        </div>
+    </div>
+
+    <h3>Terraform Findings</h3>
+    <div id="terraform-findings">
+        Loading Terraform results...
+    </div>
+</section>
+
+    <footer>
+        CloudGuard | Cloud Security Assessment System
+    </footer>
+
+</main>
+
+<script src="script.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+    "project": "CloudGuard",
+    "scan_time": "2026-11-05T21:12:12.526641",
+    "security_score": 20,
+    "total_findings": 4,
+    "findings": [
+        {
+            "severity": "HIGH",
+            "issue": "Public blob access is enabled.",
+            "recommendation": "Disable public blob access."
+        },
+        {
+            "severity": "HIGH",
+            "issue": "HTTPS-only traffic is disabled.",
+            "recommendation": "Allow HTTPS and disable HTTP traffic."
+        },
+        {
+            "severity": "CRITICAL",
+            "issue": "SSH port 22 is open to everyone.",
+            "recommendation": "Restrict SSH access to trusted IP addresses."
+        },
+        {
+            "severity": "CRITICAL",
+            "issue": "RDP port 3389 is open to everyone.",
+            "recommendation": "Restrict RDP access to trusted IP addresses."
+        }
+    ]
+}
