@@ -23,4 +23,4 @@ jobs:
         run: pip install checkov
 
       - name: Run Checkov Security Scan
-       run: checkov -d terraform --quiet --soft-fail
+        run: checkov -d terraform --quiet --soft-fail
