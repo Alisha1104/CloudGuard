@@ -1,0 +1,18 @@
+{
+    "insecure": {
+        "score": 20,
+        "total_findings": 4,
+        "findings": [
+            "Public blob access enabled",
+            "HTTPS-only traffic disabled",
+            "SSH open to everyone",
+            "RDP open to everyone"
+        ]
+    },
+    "secure": {
+        "score": 100,
+        "total_findings": 0,
+        "findings": []
+    },
+    "improvement": 80
+}

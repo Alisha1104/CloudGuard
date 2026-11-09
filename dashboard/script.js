@@ -105,3 +105,51 @@ async function loadTerraformReport() {
 
 loadReport();
 loadTerraformReport();
+
+
+async function loadComparisonReport() {
+    try {
+        const response = await fetch(
+            "/reports/config_comparison.json"
+        );
+
+        if (!response.ok) {
+            throw new Error("Comparison report not found");
+        }
+
+        const data = await response.json();
+
+        document.getElementById("insecure-score").textContent =
+            data.insecure.score + " / 100";
+
+        document.getElementById("insecure-findings").textContent =
+            data.insecure.total_findings + " findings";
+
+        document.getElementById("secure-score").textContent =
+            data.secure.score + " / 100";
+
+        document.getElementById("secure-findings").textContent =
+            data.secure.total_findings + " findings";
+
+        document.getElementById("improvement").textContent =
+            data.improvement + " points";
+
+        document.getElementById("insecure-list").innerHTML =
+            data.insecure.findings.map(finding =>
+                `<div class="finding HIGH">${finding}</div>`
+            ).join("");
+
+        document.getElementById("secure-list").innerHTML =
+            data.secure.findings.length === 0
+                ? "<p>No security findings detected!</p>"
+                : data.secure.findings.map(finding =>
+                    `<div class="finding">${finding}</div>`
+                ).join("");
+
+    } catch (error) {
+        console.error("Comparison report error:", error);
+    }
+}
+
+loadComparisonReport();
+

@@ -25,7 +25,6 @@
 
         <div class="card score-card">
             <h3>Security Score</h3>
-
             <div class="gauge" id="gauge">
                 <div class="gauge-inner">
                     <span id="score">--</span>
@@ -54,27 +53,57 @@
     <h2>Security Findings</h2>
     <div id="findings">Loading report...</div>
 
+    <section class="terraform-section">
+        <h2>Terraform Security Scan</h2>
 
-<section class="terraform-section">
-    <h2>Terraform Security Scan</h2>
+        <div class="stats">
+            <div class="card">
+                <h3>Passed Checks</h3>
+                <p id="tf-passed">0</p>
+            </div>
 
-    <div class="stats">
-        <div class="card">
-            <h3>Passed Checks</h3>
-            <p id="tf-passed">0</p>
+            <div class="card">
+                <h3>Failed Checks</h3>
+                <p id="tf-failed">0</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Failed Checks</h3>
-            <p id="tf-failed">0</p>
+        <h3>Terraform Findings</h3>
+        <div id="terraform-findings">
+            Loading Terraform results...
         </div>
-    </div>
+    </section>
 
-    <h3>Terraform Findings</h3>
-    <div id="terraform-findings">
-        Loading Terraform results...
-    </div>
-</section>
+    <!-- Configuration Comparison -->
+    <section class="comparison-section">
+        <h2>Configuration Security Comparison</h2>
+        <p>Comparison of insecure and secure test configurations.</p>
+
+        <div class="stats">
+            <div class="card">
+                <h3>Insecure Score</h3>
+                <p id="insecure-score">-- / 100</p>
+                <small id="insecure-findings">-- findings</small>
+            </div>
+
+            <div class="card">
+                <h3>Secure Score</h3>
+                <p id="secure-score">-- / 100</p>
+                <small id="secure-findings">-- findings</small>
+            </div>
+
+            <div class="card">
+                <h3>Score Improvement</h3>
+                <p id="improvement">-- points</p>
+            </div>
+        </div>
+
+        <h3>Insecure Configuration Findings</h3>
+        <div id="insecure-list">Loading...</div>
+
+        <h3>Secure Configuration Findings</h3>
+        <div id="secure-list">Loading...</div>
+    </section>
 
     <footer>
         CloudGuard | Cloud Security Assessment System
@@ -82,6 +111,6 @@
 
 </main>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>
