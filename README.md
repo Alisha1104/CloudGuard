@@ -168,3 +168,30 @@ GitHub: \[Alisha1104](https://github.com/Alisha1104)
 
 
 
+## Experimental Results
+
+CloudGuard was tested using intentionally insecure and secure configuration files.
+
+| Configuration | Security Score | Findings |
+|---|---:|---:|
+| Insecure | 20/100 | 4 |
+| Secure | 100/100 | 0 |
+
+### Detected Security Issues
+- Public blob access enabled
+- HTTPS-only traffic disabled
+- SSH open to everyone
+- RDP open to everyone
+
+### Result
+The secure configuration achieved an 80-point improvement
+in the custom security scoring system.
+
+## Project Scope
+
+CloudGuard performs local static security analysis of sample
+Azure configuration files and Terraform infrastructure code.
+It does not currently scan or deploy resources in a live Azure environment.
+
+
+
